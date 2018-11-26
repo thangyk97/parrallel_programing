@@ -1,0 +1,29 @@
+sudo apt-get install libcr-dev mpich2 mpich2-doc
+sudo apt-get install libcr-dev mpich
+
+
+1. Khoi tao I tren 1 cpu (rank 0)
+2. Chia mien tinh toan (Domain decomposition)
+3. Tu CPU 0, gui I den tat ca cac CPU (I data distribution)
+4. tinh toan (computation) (? communication)
+5. tat cac cac Cpu gui output ve cpu (rank 0) (output data collection/ gather)
+
+
+0. Khoi tao mang A, B, C -> rank 0
+   Kt Ac, Bc, Cc -> tat ca cac rank
+1. if rank == 0:
+	-> KT(C)
+2. Mc = M / size;
+	cap phat Ac <-> (Mc)
+
+3. if (rank == 0):
+	assign Ac = A(Mc), Bc = B(Mc)
+	send Ac, Bc -> rank != 0
+	recv 
+
+
+
+Bai tap:
+
+sum, max mpi,
+dot2array_mpi
